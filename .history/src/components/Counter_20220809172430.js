@@ -47,7 +47,7 @@ const Counter = () => {
     </div>
   );
 };
-function SwitchDarkMode() {
+export function SwitchDarkMode() {
   const [darkMode, setDarkMode] = useDarkMode();
   const dispatch = useDispatch();
   useEffect(() => {

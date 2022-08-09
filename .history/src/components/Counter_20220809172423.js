@@ -1,12 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import useDarkMode from "../hooks/useDarkMode";
 import {
   decrement,
   increment,
   incrementByAmount,
 } from "../redux-toolkit/counterSlice";
-import { toggleDarkMode } from "../redux-toolkit/globalSlice";
 // import { decrement, increment, incrementByValue } from "../redux/counter";
 const Counter = () => {
   const count = useSelector((state) => state.counter.count);
@@ -47,7 +45,7 @@ const Counter = () => {
     </div>
   );
 };
-function SwitchDarkMode() {
+export function SwitchDarkMode() {
   const [darkMode, setDarkMode] = useDarkMode();
   const dispatch = useDispatch();
   useEffect(() => {
