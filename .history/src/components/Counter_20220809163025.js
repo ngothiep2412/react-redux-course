@@ -16,7 +16,11 @@ const Counter = () => {
     dispatch(decrement());
   };
   const handleIncrementByValue = () => {
-    dispatch(incrementByAmount(10));
+    dispatch(
+      incrementByAmount({
+        value: 10,
+      })
+    );
   };
   return (
     <div className="flex flex-col items-center p-5 bg-white shadow w-[400px] mx-auto mt-10">
