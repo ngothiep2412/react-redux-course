@@ -25,7 +25,7 @@ const Counter = () => {
     dispatch(decrementByAmout(10));
   };
   return (
-    <div className="flex flex-col items-center p-5 bg-white shadow w-[600px] mx-auto mt-10">
+    <div className="flex flex-col items-center p-5 bg-white shadow w-[400px] mx-auto mt-10">
       <h2 className="mb-5">Count: {count}</h2>
       <div className="flex items-center justify-center gap-x-5">
         <button

@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import useDarkMode from "../hooks/useDarkMode";
 import {
   decrement,
-  decrementByAmout,
   increment,
   incrementByAmount,
 } from "../redux-toolkit/counterSlice";
@@ -21,11 +20,8 @@ const Counter = () => {
   const handleIncrementByValue = () => {
     dispatch(incrementByAmount(10));
   };
-  const handleDecrementByValue = () => {
-    dispatch(decrementByAmout(10));
-  };
   return (
-    <div className="flex flex-col items-center p-5 bg-white shadow w-[600px] mx-auto mt-10">
+    <div className="flex flex-col items-center p-5 bg-white shadow w-[400px] mx-auto mt-10">
       <h2 className="mb-5">Count: {count}</h2>
       <div className="flex items-center justify-center gap-x-5">
         <button
@@ -48,9 +44,9 @@ const Counter = () => {
         </button>
         <button
           className="inline-block p-2 border border-gray-200"
-          onClick={handleDecrementByValue}
+          onClick={handleIncrementByValue}
         >
-          Decrease by 10
+          Increase by 10
         </button>
         <SwitchDarkMode></SwitchDarkMode>
       </div>
