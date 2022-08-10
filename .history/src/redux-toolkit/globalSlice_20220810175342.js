@@ -4,7 +4,7 @@ const globalSlice = createSlice({
   name: "global",
   initialState: {
     darkMode: false,
-    showSidebar: true,
+    showSideBar: true,
   },
   reducers: {
     toggleDarkMode: (state, { payload }) => {

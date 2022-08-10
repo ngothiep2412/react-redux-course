@@ -13,13 +13,12 @@ const globalSlice = createSlice({
         darkMode: payload,
       };
     },
-    toggleSidebar: (state, { payload }) => {
-      return {
-        ...state,
-        showSidebar: payload,
-      };
-    },
+    toggleSidebar: (state, {payload}) => {
+      retrun {
+        
+      }
+    }
   },
 });
-export const { toggleDarkMode, toggleSidebar } = globalSlice.actions;
+export const { toggleDarkMode } = globalSlice.actions;
 export default globalSlice.reducer;
