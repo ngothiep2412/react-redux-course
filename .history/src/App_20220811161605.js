@@ -29,8 +29,6 @@ function App() {
     }
     const gen = demoGenerator();
     console.log(gen.next());
-    console.log(gen.return(2));
-    // console.log(gen.throw(new Error("error")));
   }, []);
   return (
     <div>

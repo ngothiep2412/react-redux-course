@@ -36,6 +36,4 @@ const store = configureStore({
 // store.dispatch(incrementByAmount(1));
 // store.dispatch(incrementByAmount(2));
 
-// sagaMiddleware.run(rootSaga);
-
 export default store;

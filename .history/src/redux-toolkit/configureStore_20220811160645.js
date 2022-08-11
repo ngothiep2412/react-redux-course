@@ -33,9 +33,7 @@ const store = configureStore({
 //   // javascript observer pattern
 //   console.log(`current state: ${store.getState().counter.count}`);
 // });
-// store.dispatch(incrementByAmount(1));
+store.dispatch(incrementByAmount(1));
 // store.dispatch(incrementByAmount(2));
-
-// sagaMiddleware.run(rootSaga);
 
 export default store;

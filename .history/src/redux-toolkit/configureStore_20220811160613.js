@@ -4,8 +4,6 @@ import counterSlice, { incrementByAmount } from "./counterSlice";
 import globalSlice from "./globalSlice";
 import createSagaMiddleware from "@redux-saga/core";
 
-// create the saga middleware
-const sagaMiddleware = createSagaMiddleware();
 const reducer = combineReducers({
   counter: counterSlice,
   global: globalSlice,
@@ -27,15 +25,13 @@ const reducer = combineReducers({
 // };
 const store = configureStore({
   reducer: reducer,
-  middleware: (gDM) => gDM().concat(logger, sagaMiddleware),
+  middleware: (gDM) => gDM().concat(logger),
 });
 // store.subscribe(() => {
 //   // javascript observer pattern
 //   console.log(`current state: ${store.getState().counter.count}`);
 // });
-// store.dispatch(incrementByAmount(1));
+store.dispatch(incrementByAmount(1));
 // store.dispatch(incrementByAmount(2));
-
-// sagaMiddleware.run(rootSaga);
 
 export default store;
