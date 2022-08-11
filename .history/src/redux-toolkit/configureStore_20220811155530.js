@@ -8,13 +8,13 @@ const reducer = combineReducers({
   global: globalSlice,
 });
 // My custom middleware to logger store state
-// const loggleMiddleware = (store) => (next) => (action) => {
-//   // your code is here
-//   console.log(action);
-//   action.payload = 10;
-//   // delete action.payload;
-//   next(action);
-// };
+const loggleMiddleware = (store) => (next) => (action) => {
+  // your code is here
+  console.log(action);
+  action.payload = 10;
+  // delete action.payload;
+  next(action);
+};
 // const loggleMiddleware = function (store) {
 //   return function (next) {
 //     return function (action) {
@@ -24,7 +24,7 @@ const reducer = combineReducers({
 // };
 const store = configureStore({
   reducer: reducer,
-  middleware: (gDM) => gDM().concat(logger),
+  middleware: (gDM) => gDM().concat(logger, loggleMiddleware),
 });
 // store.subscribe(() => {
 //   // javascript observer pattern
